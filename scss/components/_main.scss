@@ -1,5 +1,6 @@
 // Main
 
+/*
 body {
     background-color: $background;
     font-family: $ptmono
@@ -21,13 +22,13 @@ body {
     }
 }
 
-// So instead of going '.border p', you can just nest p in .border
-
 ul {
     @extend .border;
     color: green;
     padding: 15px;
 }
+
+*/
 
 // Extend pulls whatever css you have already written for that class.
 
@@ -75,9 +76,6 @@ ul {
 
 html {
     box-sizing: border-box;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
 
@@ -92,9 +90,9 @@ html {
 }
 
 body {
-    background-color: white;
+    background-color: $background;
+    font-family: $ptmono;
     text-align: center;
-    font-family: 'PT Mono', sans-serif;
     text-transform: uppercase;
     color: #262262;
 }
