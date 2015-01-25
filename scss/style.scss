@@ -1,0 +1,16 @@
+// This file compiles all CSS partials into one style sheet
+
+// AKA this file right here gets preprocessed and pulls all the mini-files into one big CSS file
+
+// Partial files are all files prefixed with an underscore i.e. '_partial.scss'
+
+// Import variables, mixins, and other modules (usually compass related)
+
+@import 'base';
+@import 'mixins';
+
+// Now we import our component rules
+
+@import 'components/main';
+
+

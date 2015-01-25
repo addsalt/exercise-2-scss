@@ -1,0 +1,31 @@
+// Declares all of our mixins
+
+@mixin button($bg-color, $hover-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 30px 15px;
+    border-radius: 3px;
+    margin: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    &:hover {
+        background-color: $hover-color;    
+    }
+    transition: all 200ms linear;
+}
+
+@mixin ease($what, $how-long, $how) {
+    transition: $what $how-long $how;
+}
+
+@mixin hide-text {
+    text-indent: -9999;
+    flex-wrap: nowrap;   
+}
+
+/* The stuff in parenthesis on the top basically defines the items inside of my mixin
+that I can switch around once I import that mixin into my main.scss. Some of the stuff is set,
+such as paddings and border radius, but by creating these reusable bits I can chance the hover, 
+background and text colours with every new button I create.
+
+The things in the parenthesis should match whatever is says in the css bit (i.e. bg-color) */

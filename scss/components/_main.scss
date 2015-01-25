@@ -1,0 +1,245 @@
+// Main
+
+body {
+    background-color: $background;
+    font-family: $ptmono
+}
+
+.primary-btn {
+    @include button($primary, $primary-dark, #fff);
+}
+
+.secondary-btn {
+    @include button($secondary, #666, #fff);
+}
+
+.border {
+    border: 1px solid $primary;
+    padding: 0 15px;
+    p {
+        color: $primary;
+    }
+}
+
+// So instead of going '.border p', you can just nest p in .border
+
+ul {
+    @extend .border;
+    color: green;
+    padding: 15px;
+}
+
+// Extend pulls whatever css you have already written for that class.
+
+@font-face {
+    font-family: 'sillyconvo';
+    src: url('../fonts/sillyconvo.eot?61765168');
+    src: url('../fonts/sillyconvo.eot?61765168#iefix') format('embedded-opentype'),
+       url('../fonts/sillyconvo.woff?61765168') format('woff'),
+       url('../fonts/sillyconvo.ttf?61765168') format('truetype'),
+       url('../fonts/sillyconvo.svg?61765168#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "sillyconvo";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: .2em;
+    text-align: center;
+
+    font-variant: normal;
+    text-transform: none;
+
+    line-height: 1em;
+    margin-left: .2em;
+    font-size: 350%;
+}
+ 
+.icon-chat:before { content: '\e800'; } /* '' */
+.icon-info:before { content: '\e801'; } /* '' */
+.icon-location:before { content: '\e802'; } /* '' */
+.icon-what:before { content: '\e803'; } /* '' */
+.icon-happy:before { content: '\e804'; } /* '' */
+
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+    box-sizing: border-box;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    background-color: rgba(0,0,0,.045)
+}
+
+body {
+    background-color: white;
+    text-align: center;
+    font-family: 'PT Mono', sans-serif;
+    text-transform: uppercase;
+    color: #262262;
+}
+
+.push-down {
+    margin-top: 3rem;
+}
+
+.push-down-half {
+    margin-top: 1.5rem;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 8rem;
+    line-height: 1;
+    color: #4b4b99;
+}
+
+h2 {
+    font-size: 1rem;
+    letter-spacing: 5px;
+    color: #efa420;
+}
+
+p {
+    letter-spacing: 2px;
+    line-height: 1.35;
+    font-size: 0.65rem;
+}
+
+.light-grey {
+    color: #e0dfe0;
+    letter-spacing: 5px;
+    font-size: 1rem;
+}
+
+/* Toggle */
+
+.toggle {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+}
+.toggle + label {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input.toggle-round-flat + label {
+    padding: 2px;
+    width: 102px;
+    height: 40px;
+    margin: 2rem auto;
+    background-color: #4b4b99;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 60px;
+    -webkit-transition: background 0.4s;
+    -moz-transition: background 0.4s;
+    -o-transition: background 0.4s;
+    transition: background 0.4s;
+}
+
+input.toggle-round-flat + label:before, input.toggle-round-flat + label:after {
+    display: block;
+    position: absolute;
+    content: "";
+}
+
+input.toggle-round-flat + label:before {
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    right: 4px;
+    background-color: #fff;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    border-radius: 60px;
+    -webkit-transition: background 0.4s;
+    -moz-transition: background 0.4s;
+    -o-transition: background 0.4s;
+    transition: background 0.4s;
+}
+
+i {
+    color: #4b4b99;
+    -webkit-transition: color 0.4s;
+    -moz-transition: color 0.4s;
+    -o-transition: color 0.4s;
+    transition: color 0.4s;
+}
+
+input.toggle-round-flat + label:after {
+    top: 7px;
+    left: 7px;
+    bottom: 7px;
+    width: 60px;
+    background-color: #4b4b99;
+    -webkit-border-radius: 52px;
+    -moz-border-radius: 52px;
+    -ms-border-radius: 52px;
+    -o-border-radius: 52px;
+    border-radius: 52px;
+    -webkit-transition: margin 0.4s, background 0.4s;
+    -moz-transition: margin 0.4s, background 0.4s;
+    -o-transition: margin 0.4s, background 0.4s;
+    transition: margin 0.4s, background 0.4s;
+}
+
+input.toggle-round-flat:checked + label {
+    background-color: #fdb825;
+    color: #fdb825;
+}
+
+input.toggle-round-flat:checked + label i {
+    color: #fdb825;
+}
+
+input.toggle-round-flat:checked + label:after {
+    margin-left: 27px;
+    background-color: #fdb825;
+    color: #fdb825;
+}
+
+label {
+    position: relative;
+}
+
+.holder {
+    position: absolute;
+    top: 4rem;
+    margin-left: -7rem;
+    width: 20rem;
+    pointer-events: none;
+}
