@@ -189,10 +189,9 @@ input.toggle-round-flat + label:after {
 input.toggle-round-flat:checked + label {
     background-color: $yellow;
     color: $yellow;
-}
-
-input.toggle-round-flat:checked + label i {
-    color: $yellow;
+    i {
+        color: $yellow;
+    }
 }
 
 input.toggle-round-flat:checked + label:after {
